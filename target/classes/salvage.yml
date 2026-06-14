@@ -1,0 +1,64 @@
+# Salvage output definitions per rarity tier.
+# Each tier returns a list of fragment items when an item is dismantled.
+# amount: min-max (e.g. "1-3") or fixed number
+
+salvage:
+  common:
+    - material: IRON_NUGGET
+      amount: "1-2"
+      display-name: "<gray>Iron Fragment"
+      lore:
+        - "<dark_gray>Salvaged from a Common item."
+
+  uncommon:
+    - material: IRON_NUGGET
+      amount: "3-5"
+      display-name: "<green>Iron Shard"
+      lore:
+        - "<dark_gray>Salvaged from an Uncommon item."
+
+  rare:
+    - material: IRON_INGOT
+      amount: "1-2"
+      display-name: "<aqua>Refined Iron"
+      lore:
+        - "<dark_gray>Salvaged from a Rare item."
+
+  epic:
+    - material: DIAMOND
+      amount: "1"
+      display-name: "<light_purple>Diamond Fragment"
+      lore:
+        - "<dark_gray>Salvaged from an Epic item."
+
+  legendary:
+    - material: DIAMOND
+      amount: "2-3"
+      display-name: "<gold>Golden Essence"
+      lore:
+        - "<dark_gray>Salvaged from a Legendary item."
+    - material: BLAZE_POWDER
+      amount: "1-2"
+      display-name: "<gold>Radiant Dust"
+      lore:
+        - "<dark_gray>Residue of legend."
+
+  mythic:
+    - material: NETHER_STAR
+      amount: "1"
+      display-name: "<color:#FF00FF>Mythic Dust"
+      lore:
+        - "<color:#FF55FF>Salvaged from a Mythic item."
+        - "<dark_gray>Highly sought after."
+
+  ancient:
+    - material: NETHER_STAR
+      amount: "1"
+      display-name: "<color:#9B30FF>Ancient Fragment"
+      lore:
+        - "<color:#C080FF>Salvaged from an Ancient item."
+    - material: AMETHYST_SHARD
+      amount: "3-5"
+      display-name: "<color:#9B30FF>Void Crystal"
+      lore:
+        - "<color:#C080FF>Pulses with forgotten power."

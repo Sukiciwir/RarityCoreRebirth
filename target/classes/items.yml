@@ -1,0 +1,284 @@
+# Rarity item definitions.
+# Each item is identified by a unique ID.
+# Fields:
+#   material   - Bukkit Material name (vanilla only)
+#   rarity     - COMMON | UNCOMMON | RARE | EPIC | LEGENDARY | MYTHIC | ANCIENT
+#   display-name - MiniMessage display name (rarity color applied automatically if omitted)
+#   lore       - List of MiniMessage lore lines (rarity footer appended automatically)
+#   set-id     - (optional) Set this item belongs to
+#   can-have-affix - (default true for RARE+) override per-item
+
+items:
+  # ────────── COMMON ──────────
+  common_wooden_sword:
+    material: WOODEN_SWORD
+    rarity: COMMON
+    display-name: "<gray>Common Wooden Sword"
+    lore:
+      - "<dark_gray>A trusty blade, nothing more."
+
+  common_leather_helmet:
+    material: LEATHER_HELMET
+    rarity: COMMON
+    display-name: "<gray>Common Leather Cap"
+    lore:
+      - "<dark_gray>Simple protection for adventurers."
+
+  # ────────── UNCOMMON ──────────
+  uncommon_stone_sword:
+    material: STONE_SWORD
+    rarity: UNCOMMON
+    display-name: "<green>◆ Uncommon Stone Sword"
+    lore:
+      - "<dark_gray>Sturdier than it looks."
+
+  uncommon_chainmail_chestplate:
+    material: CHAINMAIL_CHESTPLATE
+    rarity: UNCOMMON
+    display-name: "<green>◆ Uncommon Chainmail Chestplate"
+    lore:
+      - "<dark_gray>Woven with care."
+
+  # ────────── RARE ──────────
+  rare_iron_sword:
+    material: IRON_SWORD
+    rarity: RARE
+    display-name: "<aqua>◆◆ Rare Iron Sword"
+    lore:
+      - "<dark_gray>Forged with notable quality."
+
+  rare_iron_helmet:
+    material: IRON_HELMET
+    rarity: RARE
+    display-name: "<aqua>◆◆ Rare Iron Helmet"
+    lore:
+      - "<dark_gray>Uncommon protection."
+
+  rare_bow:
+    material: BOW
+    rarity: RARE
+    display-name: "<aqua>◆◆ Rare Hunting Bow"
+    lore:
+      - "<dark_gray>Precise and well-balanced."
+
+  # ────────── EPIC ──────────
+  epic_diamond_sword:
+    material: DIAMOND_SWORD
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Epic Diamond Sword"
+    lore:
+      - "<dark_gray>A blade of exceptional craftsmanship."
+
+  epic_diamond_chestplate:
+    material: DIAMOND_CHESTPLATE
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Epic Diamond Chestplate"
+    lore:
+      - "<dark_gray>Brilliant and resilient."
+
+  epic_crossbow:
+    material: CROSSBOW
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Epic Crossbow"
+    lore:
+      - "<dark_gray>Engineered for maximum impact."
+
+  # ────────── LEGENDARY ──────────
+  legendary_netherite_sword:
+    material: NETHERITE_SWORD
+    rarity: LEGENDARY
+    display-name: "<gold>★★★★ Legendary Netherite Sword"
+    lore:
+      - "<dark_gray>A blade whispered of in legend."
+      - "<dark_gray>Few have wielded one."
+
+  legendary_netherite_axe:
+    material: NETHERITE_AXE
+    rarity: LEGENDARY
+    display-name: "<gold>★★★★ Legendary Netherite Axe"
+    lore:
+      - "<dark_gray>The weight of history in your hands."
+
+  legendary_netherite_chestplate:
+    material: NETHERITE_CHESTPLATE
+    rarity: LEGENDARY
+    display-name: "<gold>★★★★ Legendary Netherite Chestplate"
+    lore:
+      - "<dark_gray>Impenetrable. Immovable. Legendary."
+
+  # ────────── MYTHIC ──────────
+  mythic_netherite_sword:
+    material: NETHERITE_SWORD
+    rarity: MYTHIC
+    display-name: "<color:#FF00FF>★★★★★ Mythic Netherite Sword"
+    lore:
+      - "<color:#FF55FF>A sword beyond mortal comprehension."
+      - "<dark_gray>Only the chosen may hold it."
+    can-have-affix: false
+
+  mythic_netherite_bow:
+    material: BOW
+    rarity: MYTHIC
+    display-name: "<color:#FF00FF>★★★★★ Mythic Void Bow"
+    lore:
+      - "<color:#FF55FF>Arrows bend to its will."
+    can-have-affix: false
+
+  mythic_netherite_helmet:
+    material: NETHERITE_HELMET
+    rarity: MYTHIC
+    display-name: "<color:#FF00FF>★★★★★ Mythic Crown of Stars"
+    lore:
+      - "<color:#FF55FF>Worn by those who transcended mortality."
+    can-have-affix: false
+
+  # ────────── ANCIENT ──────────
+  ancient_blade_of_eons:
+    material: NETHERITE_SWORD
+    rarity: ANCIENT
+    display-name: "<color:#9B30FF>✦ Ancient Blade of Eons"
+    lore:
+      - "<color:#C080FF>A relic from before time was counted."
+      - "<color:#9B30FF>Its edge remembers every war."
+    can-have-affix: false
+
+  ancient_staff_of_the_void:
+    material: STICK
+    rarity: ANCIENT
+    display-name: "<color:#9B30FF>✦ Ancient Staff of the Void"
+    lore:
+      - "<color:#C080FF>Carved from the bones of a forgotten god."
+    can-have-affix: false
+
+  # ────────── SET ITEMS ──────────
+  # Miner Set
+  miner_helmet:
+    material: IRON_HELMET
+    rarity: RARE
+    display-name: "<aqua>◆◆ Miner's Iron Helmet"
+    set-id: miner_set
+    lore:
+      - "<dark_gray>Part of the Miner's Set."
+
+  miner_chestplate:
+    material: IRON_CHESTPLATE
+    rarity: RARE
+    display-name: "<aqua>◆◆ Miner's Iron Chestplate"
+    set-id: miner_set
+    lore:
+      - "<dark_gray>Part of the Miner's Set."
+
+  miner_leggings:
+    material: IRON_LEGGINGS
+    rarity: RARE
+    display-name: "<aqua>◆◆ Miner's Iron Leggings"
+    set-id: miner_set
+    lore:
+      - "<dark_gray>Part of the Miner's Set."
+
+  miner_boots:
+    material: IRON_BOOTS
+    rarity: RARE
+    display-name: "<aqua>◆◆ Miner's Iron Boots"
+    set-id: miner_set
+    lore:
+      - "<dark_gray>Part of the Miner's Set."
+
+  # Fisherman Set
+  fisherman_helmet:
+    material: LEATHER_HELMET
+    rarity: UNCOMMON
+    display-name: "<green>◆ Fisherman's Cap"
+    set-id: fisherman_set
+    lore:
+      - "<dark_gray>Part of the Fisherman's Set."
+
+  fisherman_chestplate:
+    material: LEATHER_CHESTPLATE
+    rarity: UNCOMMON
+    display-name: "<green>◆ Fisherman's Vest"
+    set-id: fisherman_set
+    lore:
+      - "<dark_gray>Part of the Fisherman's Set."
+
+  fisherman_leggings:
+    material: LEATHER_LEGGINGS
+    rarity: UNCOMMON
+    display-name: "<green>◆ Fisherman's Waders"
+    set-id: fisherman_set
+    lore:
+      - "<dark_gray>Part of the Fisherman's Set."
+
+  fisherman_boots:
+    material: LEATHER_BOOTS
+    rarity: UNCOMMON
+    display-name: "<green>◆ Fisherman's Boots"
+    set-id: fisherman_set
+    lore:
+      - "<dark_gray>Part of the Fisherman's Set."
+
+  # Farmer Set
+  farmer_helmet:
+    material: LEATHER_HELMET
+    rarity: UNCOMMON
+    display-name: "<green>◆ Farmer's Straw Hat"
+    set-id: farmer_set
+    lore:
+      - "<dark_gray>Part of the Farmer's Set."
+
+  farmer_chestplate:
+    material: LEATHER_CHESTPLATE
+    rarity: UNCOMMON
+    display-name: "<green>◆ Farmer's Tunic"
+    set-id: farmer_set
+    lore:
+      - "<dark_gray>Part of the Farmer's Set."
+
+  farmer_leggings:
+    material: LEATHER_LEGGINGS
+    rarity: UNCOMMON
+    display-name: "<green>◆ Farmer's Trousers"
+    set-id: farmer_set
+    lore:
+      - "<dark_gray>Part of the Farmer's Set."
+
+  farmer_boots:
+    material: LEATHER_BOOTS
+    rarity: UNCOMMON
+    display-name: "<green>◆ Farmer's Clogs"
+    set-id: farmer_set
+    lore:
+      - "<dark_gray>Part of the Farmer's Set."
+
+  # Warrior Set
+  warrior_helmet:
+    material: DIAMOND_HELMET
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Warrior's Diamond Helmet"
+    set-id: warrior_set
+    lore:
+      - "<dark_gray>Part of the Warrior's Set."
+
+  warrior_chestplate:
+    material: DIAMOND_CHESTPLATE
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Warrior's Diamond Chestplate"
+    set-id: warrior_set
+    lore:
+      - "<dark_gray>Part of the Warrior's Set."
+
+  warrior_leggings:
+    material: DIAMOND_LEGGINGS
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Warrior's Diamond Leggings"
+    set-id: warrior_set
+    lore:
+      - "<dark_gray>Part of the Warrior's Set."
+
+  warrior_boots:
+    material: DIAMOND_BOOTS
+    rarity: EPIC
+    display-name: "<light_purple>◆◆◆ Warrior's Diamond Boots"
+    set-id: warrior_set
+    lore:
+      - "<dark_gray>Part of the Warrior's Set."

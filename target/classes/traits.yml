@@ -1,0 +1,427 @@
+# traits.yml
+# Item traits definitions
+
+# --- Offensive Traits ---
+berserker:
+  display-name: "Berserker"
+  description:
+    - "<gray>Gain temporary attack speed after killing mobs."
+  allowed-families:
+    - "SWORD"
+  weight: 50.0
+  category: "OFFENSIVE"
+  trigger: "ENTITY_KILL"
+  effects:
+    - "BUFF:FAST_DIGGING:100:1"
+
+executioner:
+  display-name: "Executioner"
+  description:
+    - "<gray>Bonus damage against low HP enemies."
+  allowed-families:
+    - "SWORD"
+
+bloodlust:
+  display-name: "Bloodlust"
+  description:
+    - "<gray>Chance to heal after killing mobs."
+  allowed-families:
+    - "SWORD"
+  weight: 100.0
+  category: "OFFENSIVE"
+  trigger: "ENTITY_KILL"
+  effects:
+    - "HEAL:2.0"
+  incompatible:
+    - "guardian"
+
+duelist:
+  display-name: "Duelist"
+  description:
+    - "<gray>Increased critical damage."
+  allowed-families:
+    - "SWORD"
+
+juggernaut:
+  display-name: "Juggernaut"
+  description:
+    - "<gray>Temporary resistance when hit."
+  allowed-families:
+    - "SWORD"
+    - "ARMOR"
+
+guardian:
+  display-name: "Guardian"
+  description:
+    - "<gray>Gain defense when below 30% HP."
+  allowed-families:
+    - "SWORD"
+    - "ARMOR"
+  weight: 75.0
+  category: "DEFENSIVE"
+  trigger: "ENTITY_DAMAGE"
+  effects:
+    - "REDUCE_DAMAGE:0.20"
+
+slayer:
+  display-name: "Slayer"
+  description:
+    - "<gray>Bonus damage against monsters."
+  allowed-families:
+    - "SWORD"
+
+titanbreaker:
+  display-name: "Titanbreaker"
+  description:
+    - "<gray>Bonus damage against armored enemies."
+  allowed-families:
+    - "SWORD"
+
+# --- Mining Traits ---
+lucky_miner:
+  display-name: "Lucky Miner"
+  description:
+    - "<gray>Faster mining."
+  allowed-families:
+    - "PICKAXE"
+
+excavator:
+  display-name: "Excavator"
+  description:
+    - "<gray>Chance to instantly break nearby blocks."
+  allowed-families:
+    - "PICKAXE"
+
+prospector:
+  display-name: "Prospector"
+  description:
+    - "<gray>Higher ore discovery chance."
+  allowed-families:
+    - "PICKAXE"
+
+deepcore:
+  display-name: "Deepcore"
+  description:
+    - "<gray>More efficient below Y-level."
+  allowed-families:
+    - "PICKAXE"
+
+stonebreaker:
+  display-name: "Stonebreaker"
+  description:
+    - "<gray>Mining stone becomes faster."
+  allowed-families:
+    - "PICKAXE"
+
+gem_hunter:
+  display-name: "Gem Hunter"
+  description:
+    - "<gray>Higher chance for rare resources."
+  allowed-families:
+    - "PICKAXE"
+
+tunnel_rat:
+  display-name: "Tunnel Rat"
+  description:
+    - "<gray>Haste effect underground."
+  allowed-families:
+    - "PICKAXE"
+
+# --- Fishing Traits ---
+fisherman:
+  display-name: "Fisherman"
+  description:
+    - "<gray>Higher EvenMoreFish chance."
+  allowed-families:
+    - "FISHING_ROD"
+
+treasure_hunter:
+  display-name: "Treasure Hunter"
+  description:
+    - "<gray>Increased treasure chance."
+  allowed-families:
+    - "FISHING_ROD"
+
+oceans_blessing:
+  display-name: "Ocean's Blessing"
+  description:
+    - "<gray>Better luck while raining."
+  allowed-families:
+    - "FISHING_ROD"
+
+deep_sea:
+  display-name: "Deep Sea"
+  description:
+    - "<gray>Bonus catches in ocean biomes."
+  allowed-families:
+    - "FISHING_ROD"
+
+angler:
+  display-name: "Angler"
+  description:
+    - "<gray>Shorter waiting time."
+  allowed-families:
+    - "FISHING_ROD"
+
+krakens_favor:
+  display-name: "Kraken's Favor"
+  description:
+    - "<gray>Chance for double catch."
+  allowed-families:
+    - "FISHING_ROD"
+
+# --- Axe Traits ---
+lumberjack:
+  display-name: "Lumberjack"
+  description:
+    - "<gray>Faster log breaking."
+  allowed-families:
+    - "AXE"
+
+timberfall:
+  display-name: "Timberfall"
+  description:
+    - "<gray>Chance to fell connected trees."
+  allowed-families:
+    - "AXE"
+
+woodsman:
+  display-name: "Woodsman"
+  description:
+    - "<gray>Reduced hunger while chopping."
+  allowed-families:
+    - "AXE"
+
+natures_touch:
+  display-name: "Nature's Touch"
+  description:
+    - "<gray>Saplings have higher drop chance."
+  allowed-families:
+    - "AXE"
+
+# --- Armor Traits ---
+bulwark:
+  display-name: "Bulwark"
+  description:
+    - "<gray>More armor while standing still."
+  allowed-families:
+    - "ARMOR"
+
+guardian_spirit:
+  display-name: "Guardian Spirit"
+  description:
+    - "<gray>Temporary resistance after taking heavy damage."
+  allowed-families:
+    - "ARMOR"
+
+last_stand:
+  display-name: "Last Stand"
+  description:
+    - "<gray>Survive fatal damage once."
+  allowed-families:
+    - "ARMOR"
+  weight: 5.0
+  category: "DEFENSIVE"
+  trigger: "FATAL_DAMAGE"
+  effects:
+    - "HEAL:1.0"
+  incompatible:
+    - "phoenix"
+
+iron_will:
+  display-name: "Iron Will"
+  description:
+    - "<gray>Knockback resistance."
+  allowed-families:
+    - "ARMOR"
+
+phoenix:
+  display-name: "Phoenix"
+  description:
+    - "<gray>Small chance to negate death."
+  allowed-families:
+    - "ARMOR"
+  weight: 1.0
+  category: "DEFENSIVE"
+  trigger: "FATAL_DAMAGE"
+  effects:
+    - "HEAL:20.0"
+  incompatible:
+    - "last_stand"
+
+frostborn:
+  display-name: "Frostborn"
+  description:
+    - "<gray>Cold immunity during Winter."
+  allowed-families:
+    - "ARMOR"
+
+# --- Boots Traits ---
+wanderer:
+  display-name: "Wanderer"
+  description:
+    - "<gray>Move speed bonus."
+  allowed-families:
+    - "BOOTS"
+
+trailblazer:
+  display-name: "Trailblazer"
+  description:
+    - "<gray>Distance traveled grants small buffs."
+  allowed-families:
+    - "BOOTS"
+
+featherstep:
+  display-name: "Featherstep"
+  description:
+    - "<gray>Reduced fall damage."
+  allowed-families:
+    - "BOOTS"
+
+pathfinder:
+  display-name: "Pathfinder"
+  description:
+    - "<gray>Speed boost while exploring."
+  allowed-families:
+    - "BOOTS"
+
+nomad:
+  display-name: "Nomad"
+  description:
+    - "<gray>Food drains slower."
+  allowed-families:
+    - "BOOTS"
+
+# --- Utility Traits ---
+merchant:
+  display-name: "Merchant"
+  description:
+    - "<gray>Better market prices."
+  allowed-families:
+    - "ANY"
+
+bargainer:
+  display-name: "Bargainer"
+  description:
+    - "<gray>Lower reforging costs."
+  allowed-families:
+    - "ANY"
+
+artisan:
+  display-name: "Artisan"
+  description:
+    - "<gray>Repair costs reduced."
+  allowed-families:
+    - "ANY"
+
+preservation:
+  display-name: "Preservation"
+  description:
+    - "<gray>Durability loss reduced."
+  allowed-families:
+    - "ANY"
+
+reinforced:
+  display-name: "Reinforced"
+  description:
+    - "<gray>Higher durability."
+  allowed-families:
+    - "ANY"
+
+scholar:
+  display-name: "Scholar"
+  description:
+    - "<gray>Gain more experience."
+  allowed-families:
+    - "ANY"
+
+fortunes_favor:
+  display-name: "Fortune's Favor"
+  description:
+    - "<gray>Small luck increase."
+  allowed-families:
+    - "ANY"
+
+# --- Seasonal Traits ---
+frostbite:
+  display-name: "Frostbite"
+  description:
+    - "<gray>Slows enemies."
+  allowed-families:
+    - "SWORD"
+    - "AXE"
+
+icebound:
+  display-name: "Icebound"
+  description:
+    - "<gray>Resistance during Winter."
+  allowed-families:
+    - "ARMOR"
+
+crimson_fury:
+  display-name: "Crimson Fury"
+  description:
+    - "<gray>Attack speed increased at night."
+  allowed-families:
+    - "SWORD"
+    - "AXE"
+
+lifesteal:
+  display-name: "Lifesteal"
+  description:
+    - "<gray>Heal from damage."
+  allowed-families:
+    - "SWORD"
+    - "AXE"
+
+gem_affinity:
+  display-name: "Gem Affinity"
+  description:
+    - "<gray>Better diamond-related rolls."
+  allowed-families:
+    - "PICKAXE"
+
+# --- Extremely Rare Traits ---
+kings_will:
+  display-name: "King's Will"
+  description:
+    - "<gray>Boost all stats slightly."
+  allowed-families:
+    - "ANY"
+
+worldshaper:
+  display-name: "Worldshaper"
+  description:
+    - "<gray>Mining and combat hybrid."
+  allowed-families:
+    - "PICKAXE"
+    - "SWORD"
+    - "AXE"
+
+fatewoven:
+  display-name: "Fatewoven"
+  description:
+    - "<gray>Luck-oriented trait."
+  allowed-families:
+    - "ANY"
+
+dragonheart:
+  display-name: "Dragonheart"
+  description:
+    - "<gray>Fire resistance + combat bonuses."
+  allowed-families:
+    - "ARMOR"
+    - "SWORD"
+    - "AXE"
+  weight: 0.5
+  category: "LEGENDARY"
+  trigger: "ENTITY_DAMAGE"
+  effects:
+    - "BUFF:FIRE_RESISTANCE:200:1"
+
+everlasting:
+  display-name: "Everlasting"
+  description:
+    - "<gray>Durability decreases slower."
+  allowed-families:
+    - "ANY"

@@ -1,0 +1,70 @@
+# Affix definitions.
+# Each affix adds a mild AttributeModifier to the item.
+# Fields:
+#   display    - MiniMessage name shown in lore
+#   description - MiniMessage description line
+#   attribute  - Bukkit Attribute name (or NONE for lore-only)
+#   operation  - ADD_NUMBER | ADD_SCALAR | MULTIPLY_SCALAR_1
+#   value      - The modifier value (keep small to avoid OP effects)
+#   slot-group - MAINHAND | OFFHAND | HEAD | CHEST | LEGS | FEET | ARMOR | ANY
+
+affixes:
+  sharp:
+    display: "<red>Sharp"
+    description: "<dark_gray>+0.5 Attack Damage"
+    attribute: GENERIC_ATTACK_DAMAGE
+    operation: ADD_NUMBER
+    value: 0.5
+    slot-group: MAINHAND
+
+  swift:
+    display: "<yellow>Swift"
+    description: "<dark_gray>+5% Movement Speed"
+    attribute: GENERIC_MOVEMENT_SPEED
+    operation: ADD_SCALAR
+    value: 0.05
+    slot-group: FEET
+
+  tough:
+    display: "<green>Tough"
+    description: "<dark_gray>+1 Max Heart"
+    attribute: GENERIC_MAX_HEALTH
+    operation: ADD_NUMBER
+    value: 2.0
+    slot-group: ARMOR
+
+  heavy:
+    display: "<dark_gray>Heavy"
+    description: "<dark_gray>+1.0 Attack Damage, -3% Speed"
+    attribute: GENERIC_ATTACK_DAMAGE
+    operation: ADD_NUMBER
+    value: 1.0
+    slot-group: MAINHAND
+    # secondary modifier applied separately in code
+    secondary-attribute: GENERIC_MOVEMENT_SPEED
+    secondary-operation: ADD_SCALAR
+    secondary-value: -0.03
+
+  lucky:
+    display: "<aqua>Lucky"
+    description: "<dark_gray>+1 Luck"
+    attribute: GENERIC_LUCK
+    operation: ADD_NUMBER
+    value: 1.0
+    slot-group: ANY
+
+  durable:
+    display: "<green>Durable"
+    description: "<dark_gray>+2 Armor Toughness"
+    attribute: GENERIC_ARMOR_TOUGHNESS
+    operation: ADD_NUMBER
+    value: 2.0
+    slot-group: ARMOR
+
+  precise:
+    display: "<light_purple>Precise"
+    description: "<dark_gray>+0.1 Attack Speed"
+    attribute: GENERIC_ATTACK_SPEED
+    operation: ADD_NUMBER
+    value: 0.1
+    slot-group: MAINHAND

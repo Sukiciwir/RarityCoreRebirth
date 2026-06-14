@@ -1,0 +1,116 @@
+# Rarity tier definitions.
+# Each tier has: color, prefix, glow, broadcast, particle, particle-density, upgradeable-into
+# Text uses MiniMessage formatting.
+
+common:
+  color: "<gray>"
+  prefix: ""
+  display-name-color: "#AAAAAA"
+  description: "Ordinary craftsmanship."
+  glow: false
+  broadcast: false
+  particle: "NONE"
+  particle-density: 0
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 1
+  trait-max: 1
+
+uncommon:
+  color: "<green>"
+  prefix: "◆ "
+  display-name-color: "#55FF55"
+  description: "Slightly above average."
+  glow: false
+  broadcast: false
+  particle: "NONE"
+  particle-density: 0
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 1
+  trait-max: 1
+
+rare:
+  color: "<blue>"
+  prefix: "◆◆ "
+  display-name-color: "#5555FF"
+  description: "Favored by fortune."
+  glow: false
+  broadcast: false
+  particle: "NONE"
+  particle-density: 0
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 1
+  trait-max: 1
+
+epic:
+  color: "<dark_purple>"
+  prefix: "◆◆◆ "
+  display-name-color: "#AA00AA"
+  description: "A remarkable creation."
+  glow: true
+  broadcast: false
+  particle: "NONE"
+  particle-density: 0
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 2
+  trait-max: 2
+
+legendary:
+  color: "<gold>"
+  prefix: "★★★★ "
+  display-name-color: "#FFAA00"
+  description: "Destined for greatness."
+  glow: true
+  broadcast: false
+  particle: "FLAME"
+  particle-density: 2
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 2
+  trait-max: 2
+
+mythic:
+  color: "<light_purple>"
+  prefix: "★★★★★ "
+  display-name-color: "#FF55FF"
+  description: "Beyond ordinary understanding."
+  glow: true
+  broadcast: true
+  particle: "SPELL_WITCH"
+  particle-density: 4
+  upgradeable-into: true
+  trait-chance: 1.0
+  trait-min: 3
+  trait-max: 3
+
+divine:
+  color: "<aqua>"
+  prefix: "✦ "
+  display-name-color: "#55FFFF"
+  description: "Blessed by unseen hands."
+  glow: true
+  broadcast: true
+  particle: "ENCHANTMENT_TABLE"
+  particle-density: 5
+  upgradeable-into: false
+  trait-chance: 1.0
+  trait-min: 3
+  trait-max: 3
+
+ancient:
+  color: "<dark_red>"
+  prefix: "✦✦ "
+  display-name-color: "#AA0000"
+  description: "Born from extraordinary times."
+  glow: true
+  broadcast: true
+  particle: "END_ROD"
+  particle-density: 6
+  upgradeable-into: false
+  gacha-only: true
+  trait-chance: 1.0
+  trait-min: 3
+  trait-max: 3

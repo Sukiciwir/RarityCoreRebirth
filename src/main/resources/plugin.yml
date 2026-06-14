@@ -1,0 +1,163 @@
+name: RarityCore
+version: '${project.version}'
+main: dev.raritycore.RarityCorePlugin
+api-version: '1.21'
+description: Lightweight vanilla-friendly rarity and collection system
+authors: [ RarityCore ]
+website: https://github.com/raritycore
+
+softdepend:
+  - PlaceholderAPI
+  - LuckPerms
+  - CrazyCrates
+  - MythicMobs
+  - EvenMoreFish
+  - DeluxeMenus
+  - JobsReborn
+  - AuraSkills
+  - WorldCore
+  - PlayerPoints
+  - vault 
+  - DiscordSRV 
+
+commands:
+  rarity:
+    description: RarityCore main command
+    usage: /rarity <reload|give|info|collection|salvage|upgrade|gacha|stats>
+    permission: raritycore.use
+    aliases: [ rc ]
+    
+  itemstory:
+    description: Opens the history of the held item
+    usage: /itemstory
+    permission: raritycore.use
+    aliases: [ toolstory ]
+    
+  raritycore:
+    description: Admin commands for testing RarityCore
+    usage: /raritycore <inspect|simulate|reveal|quality|rarity|owner|epithet|traits|familiarity|rename|ascend|broadcast|stats|age>
+    permission: raritycore.admin
+    aliases:
+      - rca
+      - rctest
+
+permissions:
+  raritycore.use:
+    description: Basic access to /rarity
+    default: true
+
+  raritycore.admin:
+    description: Full admin access to RarityCore
+    default: op
+    children:
+      raritycore.admin.reload: true
+      raritycore.admin.give: true
+      raritycore.admin.inspect: true
+      raritycore.admin.simulate: true
+      raritycore.admin.reveal: true
+      raritycore.admin.quality: true
+      raritycore.admin.rarity: true
+      raritycore.admin.traits: true
+      raritycore.admin.affixes: true
+      raritycore.admin.familiarity: true
+      raritycore.admin.owner: true
+      raritycore.admin.epithet: true
+      raritycore.admin.rename: true
+      raritycore.admin.ascend: true
+      raritycore.admin.broadcast: true
+      raritycore.admin.stats: true
+      raritycore.admin.age: true
+      raritycore.admin.resonance: true
+      raritycore.admin.evolution: true
+      raritycore.admin.cache: true
+      raritycore.admin.migrate: true
+
+  raritycore.admin.inspect:
+    description: Inspect item stats
+    default: op
+  raritycore.admin.simulate:
+    description: Simulate actions
+    default: op
+  raritycore.admin.reveal:
+    description: Reveal hidden item stats
+    default: op
+  raritycore.admin.quality:
+    description: Modify item quality
+    default: op
+  raritycore.admin.rarity:
+    description: Modify item rarity
+    default: op
+  raritycore.admin.traits:
+    description: Modify item traits
+    default: op
+  raritycore.admin.affixes:
+    description: Modify item affixes
+    default: op
+  raritycore.admin.familiarity:
+    description: Modify familiarity
+    default: op
+  raritycore.admin.owner:
+    description: Modify item owner
+    default: op
+  raritycore.admin.epithet:
+    description: Modify item epithet
+    default: op
+  raritycore.admin.rename:
+    description: Rename item
+    default: op
+  raritycore.admin.ascend:
+    description: Force ascend item
+    default: op
+  raritycore.admin.broadcast:
+    description: Test broadcasts
+    default: op
+  raritycore.admin.stats:
+    description: Modify raw item stats
+    default: op
+  raritycore.admin.age:
+    description: Modify item age
+    default: op
+  raritycore.admin.resonance:
+    description: Modify resonance override
+    default: op
+  raritycore.admin.evolution:
+    description: Modify evolution stage
+    default: op
+  raritycore.admin.cache:
+    description: Manage cache
+    default: op
+  raritycore.admin.migrate:
+    description: Force migrate items
+    default: op
+
+  raritycore.admin.reload:
+    description: Reload all RarityCore configuration files
+    default: op
+
+  raritycore.admin.give:
+    description: Give rarity items to players
+    default: op
+
+  raritycore.player.info:
+    description: View rarity info of held item
+    default: true
+
+  raritycore.player.collection:
+    description: Open the collection log
+    default: true
+
+  raritycore.player.salvage:
+    description: Use the salvage system
+    default: true
+
+  raritycore.player.upgrade:
+    description: Use the upgrade system
+    default: true
+
+  raritycore.player.gacha:
+    description: Use the built-in gacha
+    default: true
+
+  raritycore.player.stats:
+    description: View server-wide rarity statistics
+    default: true

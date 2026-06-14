@@ -1,0 +1,55 @@
+# qualities.yml
+# Quality tier definitions
+
+broken:
+  display-name: "Broken"
+  symbol: "★"
+  stat-min: 80
+  stat-max: 90
+  description: "Poorly crafted."
+
+poor:
+  display-name: "Poor"
+  symbol: "★★"
+  stat-min: 90
+  stat-max: 95
+
+normal:
+  display-name: "Normal"
+  symbol: "★★★"
+  stat-min: 95
+  stat-max: 100
+
+fine:
+  display-name: "Fine"
+  symbol: "★★★★"
+  stat-min: 100
+  stat-max: 105
+
+superior:
+  display-name: "Superior"
+  symbol: "★★★★★"
+  stat-min: 105
+  stat-max: 110
+
+flawless:
+  display-name: "Flawless"
+  symbol: "★★★★★★"
+  stat-min: 110
+  stat-max: 115
+
+masterwork:
+  display-name: "Masterwork"
+  symbol: "★★★★★★★"
+  stat-min: 115
+  stat-max: 120
+
+quality_legacy:
+  display-name: "Legacy"
+  legacy-names:
+    - "Soulbound"
+    - "Soulforged"
+    - "Transcendent"
+    - "Eternal"
+    - "Willweaver"
+  broadcast: true

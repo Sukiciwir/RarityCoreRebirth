@@ -1,0 +1,70 @@
+# All player-facing messages.
+# Supports MiniMessage formatting.
+# {prefix} is replaced with the prefix from config.yml.
+
+messages:
+  # General
+  no-permission: "{prefix}<red>You don't have permission to do that."
+  player-only: "{prefix}<red>This command can only be used by players."
+  unknown-command: "{prefix}<red>Unknown sub-command. Use <yellow>/rarity help</yellow>."
+  reload-success: "{prefix}<green>Configuration reloaded successfully."
+  invalid-player: "{prefix}<red>Player <yellow>{player}</yellow> not found."
+
+  # Item info
+  info-header: "<dark_gray>══════════════════════════"
+  info-id: "  <gray>ID: <white>{id}"
+  info-rarity: "  <gray>Rarity: {rarity_color}{rarity}"
+  info-quality: "  <gray>Quality: <white>{quality}%"
+  info-affix: "  <gray>Affix: {affix}"
+  info-set: "  <gray>Set: <white>{set}"
+  info-first-owner: "  <gray>First Owner: <white>{owner}"
+  info-discovered: "  <gray>Discovered: <white>{date}"
+  info-footer: "<dark_gray>══════════════════════════"
+  not-rarity-item: "{prefix}<red>The item you're holding is not a RarityCore item."
+
+  # Give
+  give-success: "{prefix}<green>Gave <yellow>{amount}x {item_name} <green>to <yellow>{player}<green>."
+  give-received: "{prefix}<yellow>You received <white>{amount}x {item_name}<yellow>."
+
+  # Discovery broadcast
+  discovery-broadcast: "<dark_gray>[<gradient:#FFD700:#9B30FF>RarityCore</gradient>]</dark_gray> <yellow>{player} <gray>discovered a <reset>{rarity_color}{rarity_prefix}{item_name}<gray>!"
+  discovery-first: "{prefix}<yellow>You discovered a {rarity_color}{item_name}<yellow> for the first time!"
+
+  # Upgrade
+  upgrade-success: "{prefix}<green>Upgrade successful! <white>{item} <green>is now <yellow>{new_rarity}<green>!"
+  upgrade-fail: "{prefix}<red>Upgrade failed. The item was not destroyed."
+  upgrade-locked: "{prefix}<red>Mythic and Ancient items cannot be obtained through upgrading."
+  upgrade-wrong-stone: "{prefix}<red>This upgrade stone doesn't match the item's current rarity."
+  upgrade-no-item: "{prefix}<red>Place a rarity item and the correct upgrade stone."
+  upgrade-max-tier: "{prefix}<yellow>This item is already at the maximum upgradeable tier (Legendary)."
+
+  # Salvage
+  salvage-success: "{prefix}<green>Item salvaged! You received materials."
+  salvage-cancelled: "{prefix}<yellow>Salvage cancelled."
+  salvage-no-item: "{prefix}<red>Place a rarity item to salvage."
+
+  # Gacha
+  gacha-pull: "{prefix}<yellow>Pulling from the gacha..."
+  gacha-result: "{prefix}<yellow>You obtained: {rarity_color}{item_name}<yellow>!"
+  gacha-no-levels: "{prefix}<red>You need at least {levels} XP levels to pull."
+  gacha-pity: "{prefix}<gold>✦ Pity triggered! Guaranteed high-rarity pull!"
+
+  # Collection
+  collection-title: "<dark_gray>Collection Log"
+  collection-empty: "{prefix}<yellow>You haven't discovered any items yet."
+
+  # Stats
+  stats-header: "<dark_gray>══ <gradient:#FFD700:#9B30FF>RarityCore Statistics</gradient> ══"
+  stats-total: "  <gray>Total Discoveries: <white>{total}"
+  stats-per-rarity: "  {rarity_color}{rarity}: <white>{count}"
+
+  # Set bonus
+  set-bonus-activated: "{prefix}<yellow>⚡ {set_name} <gray>bonus activated!"
+  set-bonus-deactivated: "{prefix}<gray>⚡ {set_name} bonus deactivated."
+
+  # GUI titles (MiniMessage)
+  gui-upgrade-title: "<dark_gray>⚒ Upgrade Station"
+  gui-salvage-title: "<dark_gray>⚙ Salvage Workshop"
+  gui-collection-title: "<dark_gray>📖 Collection Log"
+  gui-stats-title: "<dark_gray>📊 Server Statistics"
+  gui-gacha-title: "<dark_gray>✦ Rarity Gacha"

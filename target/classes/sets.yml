@@ -1,0 +1,75 @@
+# Set bonus definitions.
+# Each set requires `required-pieces` equipped simultaneously.
+# Effect is applied as a persistent potion effect.
+# Additional effects (e.g. crop-drop-bonus) are handled via events in code.
+
+sets:
+  miner_set:
+    display-name: "<aqua>⛏ Miner's Set"
+    required-pieces: 4
+    pieces:
+      - miner_helmet
+      - miner_chestplate
+      - miner_leggings
+      - miner_boots
+    bonus-description:
+      - "<gray>(4/4) <yellow>Haste I <gray>— dig faster."
+    effect:
+      type: FAST_DIGGING
+      amplifier: 0        # Haste I
+      ambient: false
+      show-particles: false
+      show-icon: true
+
+  fisherman_set:
+    display-name: "<green>🎣 Fisherman's Set"
+    required-pieces: 4
+    pieces:
+      - fisherman_helmet
+      - fisherman_chestplate
+      - fisherman_leggings
+      - fisherman_boots
+    bonus-description:
+      - "<gray>(4/4) <yellow>Luck I <gray>— better loot from fishing."
+    effect:
+      type: LUCK
+      amplifier: 0        # Luck I
+      ambient: false
+      show-particles: false
+      show-icon: true
+
+  farmer_set:
+    display-name: "<green>🌾 Farmer's Set"
+    required-pieces: 4
+    pieces:
+      - farmer_helmet
+      - farmer_chestplate
+      - farmer_leggings
+      - farmer_boots
+    bonus-description:
+      - "<gray>(4/4) <yellow>Saturation I <gray>— crops drop 10% more."
+    effect:
+      type: SATURATION
+      amplifier: 0        # Saturation I (subtle)
+      ambient: false
+      show-particles: false
+      show-icon: true
+    # Extra event-based bonus (handled in SetBonusManager)
+    crop-drop-bonus: 0.10
+
+  warrior_set:
+    display-name: "<red>⚔ Warrior's Set"
+    required-pieces: 4
+    pieces:
+      - warrior_helmet
+      - warrior_chestplate
+      - warrior_leggings
+      - warrior_boots
+    bonus-description:
+      - "<gray>(4/4) <yellow>Strength I <gray>— deal more damage."
+    effect:
+      type: INCREASE_DAMAGE
+      amplifier: 0        # Strength I
+      ambient: false
+      show-particles: false
+      show-icon: true

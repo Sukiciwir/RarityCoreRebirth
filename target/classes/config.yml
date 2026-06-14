@@ -1,0 +1,109 @@
+# RarityCore Main Configuration
+# All text supports MiniMessage formatting.
+
+# ──────────────────────────────────────────
+#  GENERAL
+# ──────────────────────────────────────────
+general:
+  # Prefix used in all plugin messages
+  prefix: "<dark_gray>[<gradient:#FFD700:#9B30FF>RarityCore</gradient>]</dark_gray> "
+
+  # Which rarity tiers trigger server-wide broadcasts when a player obtains one
+  # (per-rarity broadcast toggle is in rarities.yml)
+  broadcast-enabled: true
+
+  # Minimum rarity to trigger a broadcast (inclusive)
+  # Options: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY, MYTHIC, ANCIENT
+  broadcast-minimum-rarity: LEGENDARY
+
+# ──────────────────────────────────────────
+#  GENERATION (Crafting & Drops)
+# ──────────────────────────────────────────
+generation:
+  rates:
+    COMMON: 0.60
+    UNCOMMON: 0.25
+    RARE: 0.10
+    EPIC: 0.04
+    LEGENDARY: 0.01
+    MYTHIC: 0.00
+    ANCIENT: 0.00
+
+# ──────────────────────────────────────────
+#  QUALITY
+# ──────────────────────────────────────────
+quality:
+  # Whether to assign a random quality score (1–100) to every item
+  enabled: true
+  # 1 = uniform distribution; higher values skew toward lower quality (more realistic)
+  weight-exponent: 1.5
+
+# ──────────────────────────────────────────
+#  AFFIX
+# ──────────────────────────────────────────
+affix:
+  # Whether to auto-assign a random affix when creating rarity items
+  enabled: true
+  # Minimum rarity tier to be eligible for an affix
+  minimum-rarity: RARE
+  # Chance (0.0–1.0) that an eligible item receives an affix
+  chance: 0.40
+
+# ──────────────────────────────────────────
+#  GACHA
+# ──────────────────────────────────────────
+gacha:
+  enabled: true
+  # Cost per pull (experience levels)
+  cost-levels: 5
+  # Number of guaranteed-rate-up pulls before a pity reset
+  pity-threshold: 50
+  # Drop rates per rarity (must sum to 1.0)
+  rates:
+    COMMON: 0.45
+    UNCOMMON: 0.25
+    RARE: 0.15
+    EPIC: 0.09
+    LEGENDARY: 0.05
+    MYTHIC: 0.009
+    ANCIENT: 0.001
+
+# ──────────────────────────────────────────
+#  UPGRADE
+# ──────────────────────────────────────────
+upgrade:
+  # Success chance per tier jump (0.0–1.0)
+  success-chance:
+    COMMON_TO_UNCOMMON: 0.90
+    UNCOMMON_TO_RARE: 0.75
+    RARE_TO_EPIC: 0.60
+    EPIC_TO_LEGENDARY: 0.40
+  # What happens on failure: NOTHING, DOWNGRADE
+  failure-outcome: NOTHING
+
+# ──────────────────────────────────────────
+#  LEGACY / ASCENSION
+# ──────────────────────────────────────────
+legacy:
+  requirements:
+    kills: 10000
+    age-days: 90
+    max-owners: 1
+
+# ──────────────────────────────────────────
+#  COSMETIC / PARTICLES
+# ──────────────────────────────────────────
+cosmetic:
+  # Particles show when player has ≥1 set piece equipped
+  particles-on-set-active: true
+  # Particle check interval in ticks (20 = 1 second)
+  particle-interval-ticks: 40
+
+# ──────────────────────────────────────────
+#  STORAGE
+# ──────────────────────────────────────────
+storage:
+  # Currently only YAML is supported; SQLite planned for future
+  backend: YAML
+  # How often (in minutes) to auto-save all player data
+  auto-save-interval: 10
