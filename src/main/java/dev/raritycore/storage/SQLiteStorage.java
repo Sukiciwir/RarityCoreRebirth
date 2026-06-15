@@ -218,4 +218,32 @@ public final class SQLiteStorage {
             }
         });
     }
+
+    public CompletableFuture<java.util.Map<String, Integer>> getTopLegacyOwners(int limit) {
+        return CompletableFuture.supplyAsync(() -> {
+            java.util.Map<String, Integer> top = new java.util.LinkedHashMap<>();
+            String query = "SELECT current_master as player_name, COUNT(DISTINCT s.uuid) as legacy_count " +
+                           "FROM item_stats s " +
+                           "JOIN item_quality_history q ON s.uuid = q.uuid " +
+                           "WHERE q.quality_id = 'quality_legacy' AND s.is_destroyed = 0 " +
+                           "GROUP BY current_master " +
+                           "ORDER BY legacy_count DESC " +
+                           "LIMIT ?";
+            try (Connection conn = DriverManager.getConnection(url);
+                 PreparedStatement ps = conn.prepareStatement(query)) {
+                ps.setInt(1, limit);
+                try (ResultSet rs = ps.executeQuery()) {
+                    while (rs.next()) {
+                        String name = rs.getString("player_name");
+                        if (name == null || name.isEmpty()) name = "Unknown";
+                        int count = rs.getInt("legacy_count");
+                        top.put(name, count);
+                    }
+                }
+            } catch (SQLException e) {
+                plugin.getLogger().log(Level.SEVERE, "Failed to fetch top legacy owners", e);
+            }
+            return top;
+        });
+    }
 }
